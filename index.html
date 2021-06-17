@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="mainb">
+    <div class="wrapper">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-secondary p-3 col-12 position-fixed">
+                <div class="container-fluid ">
+                    <a class="navbar-brand" href="index.html">Animal's World</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="index.html">&hearts;&hearts;&hearts;</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle btn-outline-success ms-3 me-3 active" href="#"
+                                    id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Change Color
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="#">Lightblue</a></li>
+                                    <li><a class="dropdown-item" href="#">Lightgreen</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Red</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">All Rights
+                                    Reserved &copy;JD</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex">
+                            <button class="btn-outline-success ps-5 pe-5 h6 active" type="submit">Weather</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <div class="row">
+                <div class="register col-9">
+                    <form class="row g-3 border-top border-primary border-1">
+                        <div class="col-md-12 h4 text-center"><strong>REGISTER</strong></div>
+                        <div class="col-md-12">
+                            <label for="inputEmail45" class="form-label">Username</label>
+                            <input type="username" class="form-control" id="inputEmail45">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputEmail47" class="form-label">Full name</label>
+                            <input type="name" class="form-control" id="inputEmail47">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputPassword4" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="inputPassword4">
+                        </div>
+                        <div class="col-md-12">
+                            <label for="inputPassword4" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="inputPassword4">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputCity" class="form-label">Countries</label>
+                            <select id="inputState" class="form-select">
+                                <option selected>Choose...</option>
+                                <option>Bulgaria</option>
+                                <option>Germany</option>
+                                <option>Russia</option>
+                                <option>France</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="inputState" class="form-label">City</label>
+                            <select id="inputState" class="form-select">
+                                <option selected>Choose...</option>
+                                <option>Dobrich</option>
+                                <option>Silistra</option>
+                                <option>Varna</option>
+                                <option>Sofia</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <label for="inputZip" class="form-label">Zip</label>
+                            <input type="text" class="form-control" id="inputZip">
+                        </div>
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="gridCheck">
+                                <label class="form-check-label" for="gridCheck">
+                                    Agreed with the policy of the website !
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-1">
+                            <button type="submit" class="btn btn-danger">Submit</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button type="button" class="btn btn-danger" onclick="signingIN()">Sign in</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="sign in col-9">
+                    <form class="row g-3 border-top border-primary border-1">
+                        <div class="col-md-12 h4 text-center"><strong>SIGN IN</strong></div>
+                        <div class="col-md-6">
+                            <label for="inputEmail42" class="form-label">Username</label>
+                            <input type="username" class="form-control" id="inputEmail42">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputPassword4" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="inputPassword4">
+                        </div>
+                        <div class="col-md-1">
+                            <button type="submit" class="btn btn-danger">Submit</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button type="button" class="btn btn-danger" onclick="registerIn()">Register</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-1"></div>
+                <div class="navigator col-1">
+                    <div class="staticnav h4 mt-5 position-fixed">
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid position-relative">
+                <div class="row justify-content-center mt-5">
+                    <div class="col-12 col-md-4 col-sm-12 col-xs-12">
+                        <div class="card p-4">
+                            <div class="d-flex">
+                                <h6 class="flex-grow-1">Varna</h6>
+                                <h6>16:08</h6>
+                            </div>
+                            <div class="d-flex flex-column temp mt-5 mb-3">
+                                <h2 class="mb-0 font-weight-bold" id="heading"> 13° C </h2> <span
+                                    class="small grey">Stormy</span>
+                            </div>
+                            <div class="d-flex">
+                                <div class="temp-details flex-grow-1">
+                                    <p class="my-1"> <img src="https://i.imgur.com/B9kqOzp.png" height="17px"> <span> 40
+                                            km/h </span> </p>
+                                    <p class="my-1"> <i class="fa fa-tint mr-2" aria-hidden="true"></i> <span> 84%
+                                        </span> </p>
+                                    <p class="my-1"> <img src="https://i.imgur.com/wGSJ8C5.png" height="17px"> <span>
+                                            0.2h </span> </p>
+                                </div>
+                                <div> <img src="https://i.imgur.com/Qw7npIg.png" width="100px"> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="animalsGroup">
+                <h1 id="Dogs"><img class="rounded-circle"
+                        src="https://www.hainesroadanimalhospital.com/sites/default/files/styles/large/public/golden-retriever-dog-breed-info.jpg?itok=-kzTcc9h"
+                        width="100" height="100" alt="..."> Dogs</h1>
+                <label for="inputPassword4" class="form-label">Lorem ipsum dolor sit, amet consectetur
+                    adipisicing elit. Delectus sequi vitae, maiores excepturi obcaecati eaque vel temporibus
+                    ipsa nesciunt nobis repellendus vero illo dolorem perspiciatis perferendis veniam magnam
+                    pariatur impedit.</label>
+
+                <h1 id="Cats"><img class="rounded-circle" src="https://timesofindia.indiatimes.com/photo/67586673.cms"
+                        width="100" height="100" alt="..."> Cats</h1>
+                <label for="inputPassword4" class="form-label">Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit. Eius, expedita. Eum, at sapiente, inventore dolorum aliquid optio, amet dolor nisi
+                    blanditiis error dignissimos. Perspiciatis ducimus alias cupiditate a suscipit
+                    explicabo.</label>
+
+                <h1 id="Fishes"><img class="rounded-circle"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOEUZXsjo_XP1lQUY27_i3-vhYq1DjnT9Tkg&usqp=CAU"
+                        width="100" height="100" alt="..."> Fishes</h1>
+                <label for="inputPassword4" class="form-label">Lorem ipsum dolor sit, amet consectetur
+                    adipisicing elit. Delectus sequi vitae, maiores excepturi obcaecati eaque vel temporibus
+                    ipsa nesciunt nobis repellendus vero illo dolorem perspiciatis perferendis veniam magnam
+                    pariatur impedit.</label>
+
+                <h1 id="Mice">Mice</h1>
+                <label for="inputPassword4" class="form-label">Lorem ipsum dolor sit, amet consectetur
+                    adipisicing elit. Delectus sequi vitae, maiores excepturi obcaecati eaque vel temporibus
+                    ipsa nesciunt nobis repellendus vero illo dolorem perspiciatis perferendis veniam magnam
+                    pariatur impedit.</label>
+                <h1 id="Birds">Birds</h1>
+                <label for="inputPassword4" class="form-label">Lorem ipsum dolor sit, amet consectetur
+                    adipisicing elit. Delectus sequi vitae, maiores excepturi obcaecati eaque vel temporibus
+                    ipsa nesciunt nobis repellendus vero illo dolorem perspiciatis perferendis veniam magnam
+                    pariatur impedit.</label>
+                <h1 id="Horses">Horses</h1>
+                <label for="inputPassword4" class="form-label">Lorem ipsum dolor sit, amet consectetur
+                    adipisicing elit. Delectus sequi vitae, maiores excepturi obcaecati eaque vel temporibus
+                    ipsa nesciunt nobis repellendus vero illo dolorem perspiciatis perferendis veniam magnam
+                    pariatur impedit.</label>
+
+                <h1 id="Cows">Cows</h1>
+                <label for="inputPassword4" class="form-label">Lorem ipsum dolor sit, amet consectetur
+                    adipisicing elit. Delectus sequi vitae, maiores excepturi obcaecati eaque vel temporibus
+                    ipsa nesciunt nobis repellendus vero illo dolorem perspiciatis perferendis veniam magnam
+                    pariatur impedit.</label>
+
+                <h1 id="Tigers">Tigers</h1>
+                <label for="inputPassword4" class="form-label">Lorem ipsum dolor sit, amet consectetur
+                    adipisicing elit. Delectus sequi vitae, maiores excepturi obcaecati eaque vel temporibus
+                    ipsa nesciunt nobis repellendus vero illo dolorem perspiciatis perferendis veniam magnam
+                    pariatur impedit.</label>
+
+                <h1 id="Lions">Lions</h1>
+                <label for="inputPassword4" class="form-label">Lorem ipsum dolor sit, amet consectetur
+                    adipisicing elit. Delectus sequi vitae, maiores excepturi obcaecati eaque vel temporibus
+                    ipsa nesciunt nobis repellendus vero illo dolorem perspiciatis perferendis veniam magnam
+                    pariatur impedit.</label>
+                <h1 id="Snakes">Snakes</h1>
+                <label for="inputPassword4" class="form-label">Lorem ipsum dolor sit, amet consectetur
+                    adipisicing elit. Delectus sequi vitae, maiores excepturi obcaecati eaque vel temporibus
+                    ipsa nesciunt nobis repellendus vero illo dolorem perspiciatis perferendis veniam magnam
+                    pariatur impedit.</label>
+                <h1 id="Monkeys">Monkeys</h1>
+                <label for="inputPassword4" class="form-label">Lorem ipsum dolor sit, amet consectetur
+                    adipisicing elit. Delectus sequi vitae, maiores excepturi obcaecati eaque vel temporibus
+                    ipsa nesciunt nobis repellendus vero illo dolorem perspiciatis perferendis veniam magnam
+                    pariatur impedit.</label>
+
+                <h1 id="Dugs">Dugs</h1>
+                <label for="inputPassword4" class="form-label">Lorem ipsum dolor sit, amet consectetur
+                    adipisicing elit. Delectus sequi vitae, maiores excepturi obcaecati eaque vel temporibus
+                    ipsa nesciunt nobis repellendus vero illo dolorem perspiciatis perferendis veniam magnam
+                    pariatur impedit.</label>
+
+                <h1 id="Insects">Insects</h1>
+                <label for="inputPassword4" class="form-label">Lorem ipsum dolor sit, amet consectetur
+                    adipisicing elit. Delectus sequi vitae, maiores excepturi obcaecati eaque vel temporibus
+                    ipsa nesciunt nobis repellendus vero illo dolorem perspiciatis perferendis veniam magnam
+                    pariatur impedit.</label>
+
+                <h1 id="Reptiles">Reptiles</h1>
+                <label for="inputPassword4" class="form-label">Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit. Dolor inventore pariatur odit temporibus porro, eum ea libero rerum, quibusdam omnis atque
+                    facere quam quisquam hic minus molestiae? Nam, aliquam maxime?</label>
+            </div>
+        </main>
+        <footer class="footer mt-5  py-3 bg-secondary">
+            <div class="container text-center">
+                <span class="text-light">All Rights Reserved @JD 2021</span>
+            </div>
+        </footer>
+
+    </div>
+</body>
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+
+</html>
