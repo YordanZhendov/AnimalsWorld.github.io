@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="mainb">
+    <div class="wrapper">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-secondary p-3 col-12 position-fixed">
+                <div class="container-fluid ">
+                    <a class="navbar-brand" href="index.html">My Rrofile</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="index.html">&hearts;&hearts;&hearts;</a>
+                            </li>
+                            <li class="nav-item" id="weatherLi">
+                                <a class="nav-link active" href="#"><span onclick="hideWeather()">Hide</span>/<span
+                                        onclick="showWeather()">Show</span><span><strong> Weather</strong></span></a>
+                            </li>
+                            <li class="nav-item" id="weatherLi">
+                                <a class="nav-link active" href="#"><span><strong> + Add Animal </strong></span></a>
+                            </li>
+                            <li class="nav-item" id="weatherLi">
+                                <a class="nav-link active" href="#"><span><strong> - Delete Animal </strong></span></a>
+                            </li>
+                            <li class="nav-item" id="weatherLi">
+                                <a class="nav-link active" href="#"><span><strong> Update Animal </strong></span></a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Change Themes
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="index.html">Lightblue</a></li>
+                                    <li><a class="dropdown-item" href="index.html">Lightgreen</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="index.html">Red</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" tabindex="-1" aria-disabled="true">All Rights
+                                    Reserved &copy;JD</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="index.html"><button type="button" class="btn btn-light">Log Out</button></a>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <div class="row">
+                <div id="weatherWindow" class="container-fluid position-relative">
+                    <div class="row justify-content-right mt-5">
+                        <div class="col-12 col-md-4 col-sm-12 col-xs-12">
+                            <div class="card p-4">
+                                <div class="d-flex">
+                                    <h6 id="currentCity" class="flex-grow-1"></h6>
+                                    <h6 id='currentTime'></h6>
+                                </div>
+                                <div class="d-flex flex-column temp mt-5 mb-3">
+                                    <h2 class="mb-0 font-weight-bold" id="currentTemp"></h2> <span id="currentSit"
+                                        class="small grey"></span>
+                                </div>
+                                <div class="d-flex">
+                                    <div class="temp-details flex-grow-1">
+                                        <p class="my-1"> <img src="https://i.imgur.com/B9kqOzp.png" height="17px"> <span
+                                                id="currentSpeed"></span> </p>
+                                        <p class="my-1"> <i class="fa fa-tint mr-2" aria-hidden="true"></i> <span
+                                                id="currentHumidity"></span> </p>
+                                    </div>
+                                    <div> <img src="" width="100%" id="currentImage"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="navigator">
+                    <div class="staticnav h4 mt-5 position-fixed">
+                    </div>
+                </div>
+            </div>
+
+
+        </main>
+        <footer class="footer mt-5  py-3 bg-secondary">
+            <div class="container text-center">
+                <span class="text-light">All Rights Reserved @JD 2021</span>
+            </div>
+        </footer>
+
+    </div>
+</body>
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+
+
+</html>
