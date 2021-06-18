@@ -50,7 +50,21 @@ function weatheInfo() {
     var hours = todayt.getHours();
     if (seconds < 10) {
         document.getElementById('currentTime').innerText = hours + ':' + minutes + ':0' + seconds;
-    } else {
+        if(minutes <10){
+            document.getElementById('currentTime').innerText = hours + ':0' + minutes + ':0' + seconds;
+            if(hours<10){
+                document.getElementById('currentTime').innerText = '0'+ hours + ':0' + minutes + ':' + seconds;
+            }
+        }
+    } else if(minutes<10){
+        document.getElementById('currentTime').innerText = hours + ':0' + minutes + ':' + seconds;
+        if(seconds<10){
+            document.getElementById('currentTime').innerText = hours + ':0' + minutes + ':0' + seconds;
+            if(hours<10){
+                document.getElementById('currentTime').innerText = '0'+ hours + ':0' + minutes + ':' + seconds;
+            }
+        }
+    }else{
         document.getElementById('currentTime').innerText = hours + ':' + minutes + ':' + seconds;
     }
 };
