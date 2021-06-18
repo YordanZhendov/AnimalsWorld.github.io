@@ -67,7 +67,6 @@ function getCoordintes() {
         var lat = crd.latitude.toString();
         var lng = crd.longitude.toString();
         var coordinates = [lat, lng];
-        console.log(`Latitude: ${lat}, Longitude: ${lng}`);
         getCity(coordinates);
         return;
   
@@ -85,10 +84,9 @@ function getCity(coordinates) {
     var xhr = new XMLHttpRequest();
     var lat = coordinates[0];
     var lng = coordinates[1];
-  
+    const api="42f8451fedbcbef6488a995e06463d3b"
     // Paste your LocationIQ token below.
-    xhr.open('GET', "https://us1.locationiq.com/v1/reverse.php?key=YOUR_PRIVATE_TOKEN&lat=" +
-    lat + "&lon=" + lng + "&format=json", true);
+    xhr.open('GET', `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${api}`);
     xhr.send();
     xhr.onreadystatechange = processRequest;
     xhr.addEventListener("readystatechange", processRequest, false);
@@ -96,8 +94,9 @@ function getCity(coordinates) {
     function processRequest(e) {
         if (xhr.readyState == 4 && xhr.status == 200) {
             var response = JSON.parse(xhr.responseText);
-            var city = response.address.city;
-            document.getElementById('currentCity').innerText=city;
+            var city = response.name;
+            var country = response.sys.country;
+            document.getElementById('currentCity').innerText=city+', '+country;
             return;
         }
     }
