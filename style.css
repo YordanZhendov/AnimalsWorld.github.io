@@ -61,6 +61,10 @@ footer{
 }
 
 /* //weather */
+
+#weatherWindow{
+    display: none;
+}
 .card {
     width: 70%;
     height: 75%;

@@ -1,7 +1,8 @@
 window.onload = function () {
-    weatheInfo();
     getCoordintes();
+    weatheInfo();
     window.setInterval(function () { weatheInfo() }, 1000);
+    checkAcceptLocation()
     focusIndexPageReg();
     createMenu();
     window.onscroll = function () { myFunction() };
@@ -84,8 +85,8 @@ function getCity(coordinates) {
     var xhr = new XMLHttpRequest();
     var lat = coordinates[0];
     var lng = coordinates[1];
+    checkAcceptLocation(lat,lng);
     const api="42f8451fedbcbef6488a995e06463d3b"
-    // Paste your LocationIQ token below.
     xhr.open('GET', `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${api}`);
     xhr.send();
     xhr.onreadystatechange = processRequest;
@@ -96,9 +97,29 @@ function getCity(coordinates) {
             var response = JSON.parse(xhr.responseText);
             var city = response.name;
             var country = response.sys.country;
+            var currentTemp = response.main.temp;
+            var currentSit = response.weather[0].main;
+            var currentSpeed = response.wind.speed;
+            var currentHumidity = response.main.humidity;
+            var currentImage = response.weather[0].icon;
             document.getElementById('currentCity').innerText=city+', '+country;
+            document.getElementById('currentTemp').innerText=Math.round(currentTemp-273.15,2)+'°C';
+            document.getElementById('currentSit').innerText=currentSit;
+            document.getElementById('currentSpeed').innerText=currentSpeed+'m/s';
+            document.getElementById('currentHumidity').innerText=currentHumidity+'%';
+            document.getElementById('currentImage').src=`http://openweathermap.org/img/w/${currentImage}.png`;
             return;
         }
+    }
+}
+
+function checkAcceptLocation(lat,lng){
+    if(lat!=undefined && lng!=undefined){
+        document.getElementById('weatherLi').style.display="block";
+        showWeather()
+    }else{
+        document.getElementById('weatherLi').style.display="none";
+        hideWeather()
     }
 }
   
