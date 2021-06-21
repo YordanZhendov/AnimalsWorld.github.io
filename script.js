@@ -19,9 +19,6 @@ function focusIndexPageSign() {
 var register = document.getElementsByClassName('register')[0];
 var sign = document.getElementsByClassName('sign')[0];
 
-sign.style.marginTop = (969 / window.innerHeight * 6);
-register.style.marginTop = (969 / window.innerHeight * 6);
-
 function signingIN() {
     register.style.display = 'none';
     sign.style.display = 'block';

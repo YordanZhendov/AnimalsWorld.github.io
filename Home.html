@@ -93,46 +93,48 @@
                     <br>
                     <div class="col-7">
                         <label for="inputEmail45" class="form-label"><strong>Username :</strong></label>
-                        <label class="profileInfo" >JordanDK</label>
-                        <input type="name" class="profilInput form-control" placeholder="Username" id="inputEmail47">
+                        <label >JordanDK</label>
                     </div>
                     <div class="col-7 mt-2">
                         <label for="inputEmail47" class="form-label"><strong>Full name :</strong></label>
                         <label class="profileInfo" >Ivan Ivanov Georgiev</label>
-                        <input type="name" class="profilInput form-control" placeholder="Full name" id="inputEmail47">
+                        <input type="text" class="profilInput form-control " value="" placeholder="Full name" id="inputEmail47">
                     </div>
                     <div class="col-7 mt-2">
                         <label for="inputPassword4" class="form-label"><strong>Password :</strong></label>
                         <label class="profileInfo" >**********</label>
-                        <input type="name" class="profilInput form-control" placeholder="Password" id="inputEmail47">
+                        <input type="password" class="profilInput form-control" value="" placeholder="Password" id="inputEmail47">
                     </div>
                     <div class="col-7 mt-2">
                         <label for="inputPassword4" class="form-label"><strong>Email :</strong></label>
                         <label class="profileInfo" >JD@gmail.com</label>
-                        <input type="name" class="profilInput form-control" placeholder="Email" id="inputEmail47">
+                        <input type="email" class="profilInput form-control" value="" placeholder="Email" id="inputEmail47">
+                    </div>
+                    <div class="col-7 mt-2">
+                        <label for="inputPassword4" class="form-label"><strong>Phone :</strong></label>
+                        <label class="profileInfo" > +085848958</label>
+                        <input type="number" class="profilInput form-control" value="" placeholder="Phone" id="inputEmail47">
                     </div>
                     <div class="col-7 mt-2">
                         <label for="inputCity" class="form-label"><strong>Countries :</strong></label>
-                        <label class="profileInfo" >Bulgaria</label>
-                        <input type="name" class="profilInput form-control" placeholder="Countries" id="inputEmail47">
+                        <label >Bulgaria</label>
                     </div>
                     <div class="col-7 mt-2">
                         <label for="inputState" class="form-label"><strong>City :</strong></label>
-                        <label class="profileInfo" >Varna</label>
-                        <input type="name" class="profilInput form-control" placeholder="City" id="inputEmail47">
+                        <label >Varna</label>
                     </div>
                     <div class="col-7 mt-2">
                         <label for="inputZip" class="form-label"><strong>Postcode :</strong></label>
-                        <label class="profileInfo" >9000</label>
-                        <input type="name" class="profilInput form-control" placeholder="Postcode" id="inputEmail47">
+                        <label >9000</label>
                     </div>
+                    
                     <br>
                     <div class="row">
                         <div class="col-md-3 mt-1">
-                            <button type="button" class="btn btn-danger"">Make Changes</button>
+                            <button onclick="makeChanges()" type="button" class="btn btn-danger"">Make Changes</button>
                         </div>
                         <div class=" col-md-9 mt-1">
-                                <button type="button" class="btn btn-success"">Save Changes</button>
+                                <button type="submit" class="btn btn-success"">Save Changes</button>
                         </div>
                     </div>
                 </form>
@@ -349,6 +351,7 @@
     </div>
 </body>
 <script src="script.js"></script>
+<script src="scriptHome.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
